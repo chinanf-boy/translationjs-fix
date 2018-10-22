@@ -1,6 +1,6 @@
 {
   "name": "translation.js-fix",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "集成多种翻译引擎并提供统一的翻译接口。",
   "main": "dist/tjs.node.common.js",
   "module": "dist/tjs.node.es.js",
@@ -8,10 +8,10 @@
   "unpkg": "dist/tjs.browser.js",
   "types": "declaration/index.d.ts",
   "author": {
-		"name": "chinanf-boy",
-		"email": "865501259@qq.com",
-		"url": "http://llever.com"
-	},
+    "name": "chinanf-boy",
+    "email": "865501259@qq.com",
+    "url": "http://llever.com"
+  },
   "files": [
     "dist",
     "declaration",
