@@ -1,0 +1,8 @@
+/node_modules/
+/dist/
+/dev.js
+/libs/
+/.*/
+.DS_Store
+/declaration/
+yarn-error.log
