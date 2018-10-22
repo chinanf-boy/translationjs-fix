@@ -1,7 +1,7 @@
 # translation.js [![NPM Version](https://img.shields.io/npm/v/translation.js.svg?style=flat-square)](https://www.npmjs.com/package/translation.js)
 
 
-## 原作者 忙，只能自己上传个Fix 版本先 @chinanf-boy
+## 原作者 忙，只能自己上传个Fix 版本先，同时加点测试 @chinanf-boy
 
 
 translation.js 整合了[谷歌翻译](https://translate.google.cn/)、[百度翻译](https://fanyi.baidu.com/)与[有道翻译](http://fanyi.youdao.com/)的网页翻译接口，让你方便的在这些翻译接口之间切换，并获取相同数据结构的翻译结果。
