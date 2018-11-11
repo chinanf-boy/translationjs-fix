@@ -1,4 +1,4 @@
-import test from 'ava';
+ import test from 'ava';
 const tjs = require('../dist/tjs.node.common');
 
 test('title', async t => {

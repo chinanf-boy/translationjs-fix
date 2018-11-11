@@ -10,7 +10,7 @@ import { stringify } from 'querystring'
 import getError, { ERROR_CODE } from '../error'
 
 export default function(options: RequestOptions): Promise<any> {
-  const { method = 'get', time = 5000 } = options
+  const { method = 'get',timeout = 5000 } = options
   const urlObj = parse(options.url, true)
   const qs = stringify(Object.assign(urlObj.query, options.query))
   const headers: StringObject = {
@@ -44,7 +44,7 @@ export default function(options: RequestOptions): Promise<any> {
     method,
     path: urlObj.pathname + '?' + qs,
     headers,
-    timeout: time,
+    timeout,
     auth: urlObj.auth
   }
 

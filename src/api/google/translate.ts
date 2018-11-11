@@ -9,7 +9,7 @@ import detect from './detect'
 import getError, { ERROR_CODE } from '../../utils/error'
 
 export default async function(options: StringOrTranslateOptions) {
-  let { text, com = false, from = '', to = '', time = 5000 } =
+  let { text, com = false, from = '', to = '',timeout } =
     typeof options === 'string' ? { text: options } : options
 
   if (!from) {
@@ -45,14 +45,14 @@ export default async function(options: StringOrTranslateOptions) {
         dt: ['at', 'bd', 'ex', 'md', 'qca', 'rw', 'rm', 'ss', 't'],
         q: text
       },
-        time
+       timeout
     }),
     {
       from,
       to,
       com,
       text,
-      time
+     timeout
     }
   )
 }

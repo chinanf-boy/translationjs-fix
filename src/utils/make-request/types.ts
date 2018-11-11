@@ -12,5 +12,5 @@ export interface RequestOptions {
   type?: 'form' | 'json'
   headers?: StringObject
   responseType?: 'document' | 'json' | 'text',
-  time?: number
+ timeout?: number
 }

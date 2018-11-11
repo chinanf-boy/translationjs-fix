@@ -18,7 +18,7 @@ const headers: StringObject = IS_NODE
     }
 
 export default async function(options: StringOrTranslateOptions) {
-  let { from = undefined, to = undefined, text, time = 5000 } =
+  let { from = undefined, to = undefined, text,timeout } =
     typeof options === 'string' ? { text: options } : options
 
   if (!from) {
@@ -53,7 +53,7 @@ export default async function(options: StringOrTranslateOptions) {
         await sign(text)
       ),
       headers,
-      time
+     timeout
     })
   )
 }
