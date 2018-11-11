@@ -30,6 +30,7 @@
     "@types/blueimp-md5": "^2.7.0",
     "@types/node": "^10.11.7",
     "blueimp-md5": "^2.10.0",
+    "got": "^9.3.2",
     "random-fake-useragent": "^0.1.0",
     "tslib": "^1.8.1"
   },

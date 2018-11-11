@@ -9,7 +9,7 @@ import detect from './detect'
 import getError, { ERROR_CODE } from '../../utils/error'
 
 export default async function(options: StringOrTranslateOptions) {
-  let { text, com = false, from = '', to = '',timeout } =
+  let { text, com = false, from = '', to = '',timeout = 5000 } =
     typeof options === 'string' ? { text: options } : options
 
   if (!from) {

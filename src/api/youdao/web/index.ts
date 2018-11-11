@@ -46,7 +46,7 @@ const headers = IS_NODE
   : undefined
 
 export default async function(options: StringOrTranslateOptions) {
-  let { text, from = '', to = '',timeout } =
+  let { text, from = '', to = '',timeout = 5000 } =
     typeof options === 'string' ? { text: options } : options
 
   text = text.slice(0, 5000)
