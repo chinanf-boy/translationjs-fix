@@ -1,10 +1,7 @@
 import {StringObject} from '../../types';
 import {RequestOptions} from './types';
 const got = require('got');
-import {request as requestHTTP} from 'http';
-import {request as requestHTTPs} from 'https';
 const fakeUA = require('random-fake-useragent');
-// import superagent from "superagent";
 import {parse} from 'url';
 import {stringify} from 'querystring';
 
@@ -18,7 +15,7 @@ export default async function(options: RequestOptions): Promise<any> {
     'User-Agent': fakeUA.getRandom()
   };
 
-  let body: string;
+  let body: string = "";
 
   if (method === 'post') {
     switch (options.type) {
@@ -40,22 +37,14 @@ export default async function(options: RequestOptions): Promise<any> {
 
   Object.assign(headers, options.headers);
 
-  const httpOptions = {
-    hostname: urlObj.hostname,
-    method,
-    path: urlObj.pathname + '?' + qs,
-    headers,
-    timeout,
-    auth: urlObj.auth
-  };
-
   const responseType = options.responseType || 'json';
 
   const GotOpts = {
     baseUrl: urlObj.protocol + '//' + urlObj.hostname,
     query: qs,
     headers,
-    timeout
+    timeout,
+    body
     // json: true
   };
 
